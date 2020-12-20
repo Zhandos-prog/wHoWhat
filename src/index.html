@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://raw.githubusercontent.com"/>
+    <title>wHo?wHat?</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="button-block">
+          <button class="switch active" id="word">Слово</button>
+          <button class="switch" id="list">Список</button>
+        </div>
+        <div class="content-block">
+          <div class="grid-container-word">
+            <label for="words">Кто? Что?</label><input class="word" type="text" name="words" id="words" placeholder="Введите слово именительном падеже">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-square-fill square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2.5 8.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
+            </svg>
+            <label>Кого? Чего?</label><input class="cases-response word" readonly>
+            <label>Кому? Чему?</label><input class="cases-response word" readonly>
+            <label>Кого? Что?</label><input class="cases-response word" readonly>
+            <label>Кем? Чем?</label><input class="cases-response word" readonly>
+            <label>Кем? Чем?</label><input class="cases-response word" readonly>
+            <div class="clear-block">
+              <button class="clear" type="button">Очистить</button>
+            </div>
+          </div>
+          <div class="grid-container-list">
+            <div class="texterea-in">
+              <textarea name="words" id="words-in" cols="37" rows="23"></textarea>
+            </div>
+            <div class="button">
+              <button class="cases" id="genitive" type="button">Кого? Чего?</button>
+              <button class="cases" id="dative" type="button">Кому? Чему?</button>
+              <button class="cases" id="accusative" type="button">Кого? Что?</button>
+              <button class="cases" id="instrumental" type="button">Кем? Чем?</button>
+              <button class="cases" id="prepositional" type="button">О ком? О чём?</button>
+              <button class="texterea-clear">Очистить</button>
+
+            </div>
+            <div class="texterea-out">
+              <textarea name="words" id="words-out" cols="37" rows="23" readonly></textarea>
+              <button class="export-xlsx">Экспорт в xls</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/rules.js"></script>
+    <script src="../assets/js/custom.js"></script>
+
+  </body>
+</html>
